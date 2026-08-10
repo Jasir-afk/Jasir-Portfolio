@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jasir | Flutter Developer Portfolio</title>
+  <meta name="description" content="Jasir – Passionate Flutter Developer skilled in building responsive, cross-platform mobile apps. View projects, skills, and experience." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Cursor glow -->
+  <div class="cursor-glow" id="cursorGlow"></div>
+
+  <!-- ─── NAVBAR ─── -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-logo">
+      <span class="logo-bracket">&lt;</span>
+      <span class="logo-name">Jasir</span>
+      <span class="logo-bracket">/&gt;</span>
+    </div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#home" class="nav-link active">Home</a></li>
+      <li><a href="#about" class="nav-link">About</a></li>
+      <li><a href="#skills" class="nav-link">Skills</a></li>
+      <li><a href="#experience" class="nav-link">Experience</a></li>
+      <li><a href="#projects" class="nav-link">Projects</a></li>
+      <li><a href="#contact" class="nav-link">Contact</a></li>
+    </ul>
+    <a href="#contact" class="btn-hire">Hire Me</a>
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- ─── HERO ─── -->
+  <section class="hero" id="home">
+    <canvas id="particleCanvas"></canvas>
+    <div class="hero-content">
+      <div class="hero-badge animate-fade-up">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="14" x="2" y="7" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+        Available for work
+      </div>
+      <h1 class="hero-title animate-fade-up delay-1">
+        Hi, I'm <span class="gradient-text">Jasir</span>
+      </h1>
+      <div class="hero-subtitle animate-fade-up delay-2">
+        <span class="typing-prefix">I build </span>
+        <span class="typing-text" id="typingText"></span>
+        <span class="typing-cursor">|</span>
+      </div>
+      <p class="hero-desc animate-fade-up delay-3">
+        A passionate Flutter developer crafting beautiful, high-performance
+        cross-platform mobile experiences. From idea to Play Store — I ship it.
+      </p>
+      <div class="hero-cta animate-fade-up delay-4">
+        <a href="#projects" class="btn-primary">View My Work</a>
+        <a href="assets/Jasir_CV.pdf" class="btn-outline" download>Download CV</a>
+      </div>
+      <div class="hero-social animate-fade-up delay-5">
+        <a href="mailto:erumbuzi@gmail.com" class="social-pill" aria-label="Email">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+          Email
+        </a>
+        <a href="https://linkedin.com/in/jasir-muhammed-7486a8333" target="_blank" class="social-pill" aria-label="LinkedIn">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+          LinkedIn
+        </a>
+        <a href="tel:+917034415936" class="social-pill" aria-label="Phone">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.29h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.09a16 16 0 0 0 6 6l.91-.91a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21.73 16a2 2 0 0 1 .27.92z"/></svg>
+          +91 70344 15936
+        </a>
+      </div>
+    </div>
+    <div class="hero-image animate-slide-left delay-2">
+      <div class="photo-frame">
+        <img src="assets/images/photo3.jpg" alt="Jasir - Flutter Developer" class="developer-photo" />
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── ABOUT ─── -->
+  <section class="section" id="about">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">About Me</span>
+        <h2 class="section-title">Who am I?</h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="about-grid">
+        <div class="about-photo-col">
+          <div class="about-code-window">
+            <div class="window-header">
+              <div class="window-buttons">
+                <span class="window-dot red"></span>
+                <span class="window-dot yellow"></span>
+                <span class="window-dot green"></span>
+              </div>
+              <div class="window-title">jasir_profile.dart</div>
+            </div>
+            <div class="window-body">
+              <pre><code><span class="code-keyword">class</span> <span class="code-class">Jasir</span> <span class="code-keyword">extends</span> <span class="code-class">Developer</span> {
+  <span class="code-keyword">final</span> String role = <span class="code-string">'Flutter Dev'</span>;
+  <span class="code-keyword">final</span> String location = <span class="code-string">'Pulikkal'</span>;
+  <span class="code-keyword">final</span> List&lt;String&gt; stack = [
+    <span class="code-string">'Flutter'</span>, <span class="code-string">'Dart'</span>,
+    <span class="code-string">'GetX'</span>, <span class="code-string">'REST APIs'</span>
+  ];
+  <span class="code-keyword">final</span> bool available = <span class="code-keyword">true</span>;
+}</code></pre>
+            </div>
+            <div class="about-exp-badge">
+              <span class="badge-num">1<span style="font-size:0.5em">yr</span></span>
+              <span class="badge-label">Experience</span>
+            </div>
+          </div>
+        </div>
+        <div class="about-text-col">
+          <p class="about-lead">
+            I'm a <strong class="text-accent">Flutter developer</strong> with 1 year of hands-on experience in mobile app development, passionate about delivering polished, production-ready applications.
+          </p>
+          <p class="about-body">
+            I've spent time learning Dart, building responsive UI components, and shipping real apps to the Play Store. I'm eager to join a team where I can grow, collaborate, and contribute to meaningful projects.
+          </p>
+          <div class="about-facts">
+            <div class="fact-item">
+              <div class="fact-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="20" x="5" y="2" rx="2" ry="2"/><path d="M12 18h.01"/></svg>
+              </div>
+              <div>
+                <strong>3+ Apps</strong>
+                <span>Published on Play Store</span>
+              </div>
+            </div>
+            <div class="fact-item">
+              <div class="fact-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg>
+              </div>
+              <div>
+                <strong>REST APIs</strong>
+                <span>Integrated & Consumed</span>
+              </div>
+            </div>
+            <div class="fact-item">
+              <div class="fact-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="7.5" cy="8.5" r="4.5"/><path d="m10.6 10.6 7.4 7.4"/><path d="m14 14 3 3"/><path d="m18 18 3 3"/><path d="m4 4 3 3"/></svg>
+              </div>
+              <div>
+                <strong>KYC &amp; Auth</strong>
+                <span>Full Workflows Built</span>
+              </div>
+            </div>
+            <div class="fact-item">
+              <div class="fact-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="3 6 9 3 15 6 21 3 21 18 15 21 9 18 3 21"/><line x1="9" x2="9" y1="3" y2="18"/><line x1="15" x2="15" y1="6" y2="21"/></svg>
+              </div>
+              <div>
+                <strong>Google Maps</strong>
+                <span>Navigation Integration</span>
+              </div>
+            </div>
+          </div>
+          <div class="about-info-row">
+            <div class="info-chip">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+              Pulikkal, Kerala
+            </div>
+            <div class="info-chip">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12h5"/><path d="M17 12h5"/><path d="M7 12a5 5 0 0 1 5-5 5 5 0 0 1 5 5"/><path d="M7 12a5 5 0 0 0 5 5 5 5 0 0 0 5-5"/></svg>
+              Malayalam · English
+            </div>
+            <div class="info-chip">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+              Flutter Certified
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── SKILLS ─── -->
+  <section class="section section-alt" id="skills">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Skills</span>
+        <h2 class="section-title">What I work with</h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="skills-grid">
+        <div class="skill-card" data-delay="0">
+          <div class="skill-card-header">
+            <div class="skill-icon">
+              <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M57.5 12.5L20 50L38.75 68.75L95 12.5H57.5Z" fill="#54C5F8"/>
+                <path d="M57.5 50L38.75 68.75L57.5 87.5H95L57.5 50Z" fill="#01579B"/>
+                <path d="M38.75 68.75L57.5 50L76.25 68.75L57.5 87.5L38.75 68.75Z" fill="#29B6F6"/>
+              </svg>
+            </div>
+            <h3>Flutter & Dart</h3>
+          </div>
+          <p class="skill-desc">Crafting beautiful, high-performance native Android & iOS applications using the Flutter framework and clean Dart code.</p>
+          <div class="skill-card-tags">
+            <span>Widgets</span><span>Material UI</span><span>Animations</span><span>OOP</span>
+          </div>
+        </div>
+
+        <div class="skill-card" data-delay="100">
+          <div class="skill-card-header">
+            <div class="skill-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" xmlns="http://www.w3.org/2000/svg">
+                <path d="M4 4h6v6H4zM14 4h6v6h-6zM4 14h6v6H4zM14 14h6v6h-6z" stroke-linejoin="round"/>
+                <path d="M7 10v4M17 10v4M10 7h4M10 17h4" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <h3>State Management</h3>
+          </div>
+          <p class="skill-desc">Structuring application business logic, reactive streams, state transitions, and context-based state trees cleanly.</p>
+          <div class="skill-card-tags">
+            <span>GetX</span><span>Provider</span><span>Reactivity</span><span>Controllers</span>
+          </div>
+        </div>
+
+        <div class="skill-card" data-delay="200">
+          <div class="skill-card-header">
+            <div class="skill-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="12" cy="12" r="10"/>
+                <path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <h3>REST API / HTTP</h3>
+          </div>
+          <p class="skill-desc">Integrating backend REST APIs, parsing structured JSON payloads, and executing secure async network communication.</p>
+          <div class="skill-card-tags">
+            <span>REST/JSON</span><span>HTTP Client</span><span>Dio</span><span>Async/Await</span>
+          </div>
+        </div>
+
+        <div class="skill-card" data-delay="300">
+          <div class="skill-card-header">
+            <div class="skill-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" xmlns="http://www.w3.org/2000/svg">
+                <ellipse cx="12" cy="5" rx="9" ry="3"/>
+                <path d="M3 5v14c0 1.657 4.03 3 9 3s9-1.343 9-3V5" stroke-linecap="round"/>
+                <path d="M3 12c0 1.657 4.03 3 9 3s9-1.343 9-3" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <h3>Local Database</h3>
+          </div>
+          <p class="skill-desc">Persisting application preferences, secure user tokens, local database caching, and offline-first storage pipelines.</p>
+          <div class="skill-card-tags">
+            <span>Hive</span><span>Key-Value</span><span>Offline Sync</span><span>TypeAdapters</span>
+          </div>
+        </div>
+
+        <div class="skill-card" data-delay="400">
+          <div class="skill-card-header">
+            <div class="skill-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" xmlns="http://www.w3.org/2000/svg">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" stroke-linecap="round" stroke-linejoin="round"/>
+                <circle cx="12" cy="10" r="3"/>
+              </svg>
+            </div>
+            <h3>Google Maps</h3>
+          </div>
+          <p class="skill-desc">Integrating map views, location tracking, destination navigation, geofences, and custom map markers.</p>
+          <div class="skill-card-tags">
+            <span>Map Views</span><span>Markers</span><span>Polylines</span><span>Geolocator</span>
+          </div>
+        </div>
+
+        <div class="skill-card" data-delay="500">
+          <div class="skill-card-header">
+            <div class="skill-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" xmlns="http://www.w3.org/2000/svg">
+                <polyline points="16 18 22 12 16 6"/>
+                <polyline points="8 6 2 12 8 18"/>
+              </svg>
+            </div>
+            <h3>Tools & Workspace</h3>
+          </div>
+          <p class="skill-desc">Operating in advanced environments with integrated version control pipelines, debugging systems, and build servers.</p>
+          <div class="skill-card-tags">
+            <span>VS Code</span><span>Git & GitHub</span><span>Android Studio</span><span>Play Console</span>
+          </div>
+        </div>
+      </div>
+      <div class="tech-bubbles">
+        <span class="tech-bubble">Flutter</span>
+        <span class="tech-bubble">Dart</span>
+        <span class="tech-bubble">GetX</span>
+        <span class="tech-bubble">Provider</span>
+        <span class="tech-bubble">Hive</span>
+        <span class="tech-bubble">REST API</span>
+        <span class="tech-bubble">HTTP</span>
+        <span class="tech-bubble">Google Maps</span>
+        <span class="tech-bubble">Deep Linking</span>
+        <span class="tech-bubble">KYC Flow</span>
+        <span class="tech-bubble">Play Store</span>
+        <span class="tech-bubble">Git</span>
+        <span class="tech-bubble">Android Studio</span>
+        <span class="tech-bubble">VS Code</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── EXPERIENCE ─── -->
+  <section class="section" id="experience">
+    <canvas id="experienceCanvas"></canvas>
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Experience</span>
+        <h2 class="section-title">My Journey</h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="timeline">
+        <div class="timeline-item" data-side="right">
+          <div class="timeline-dot">
+            <div class="dot-core"></div>
+          </div>
+          <div class="timeline-card">
+            <div class="timeline-badge edu">Education</div>
+            <h3>Flutter Development Training</h3>
+            <h4>Haris &amp; Co.</h4>
+            <span class="timeline-period">6 Months · Intensive Bootcamp</span>
+            <ul class="timeline-list">
+              <li>Hands-on training in Dart programming and Flutter framework</li>
+              <li>State management, API integration, and deep linking</li>
+              <li>Built and published real-world apps on the Play Store</li>
+            </ul>
+            <div class="timeline-tags">
+              <span>Flutter</span><span>Dart</span><span>GetX</span><span>Hive</span>
+            </div>
+          </div>
+        </div>
+        <div class="timeline-item" data-side="left">
+          <div class="timeline-dot">
+            <div class="dot-core"></div>
+          </div>
+          <div class="timeline-card">
+            <div class="timeline-badge">Current</div>
+            <h3>Flutter Developer</h3>
+            <h4>Sysbreeze Technologies</h4>
+            <span class="timeline-period">1 Year · Mobile Development</span>
+            <ul class="timeline-list">
+              <li>Contributed to mobile application development using Flutter and Dart</li>
+              <li>Built responsive, reusable UI components following design guidelines</li>
+              <li>Collaborated with the team on feature development and bug fixes</li>
+            </ul>
+            <div class="timeline-tags">
+              <span>Flutter</span><span>Dart</span><span>UI/UX</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── PROJECTS ─── -->
+  <section class="section section-alt" id="projects">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Projects</span>
+        <h2 class="section-title">What I've Built</h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="projects-grid">
+
+        <!-- CareMall E-Commerce -->
+        <div class="project-card" data-delay="0">
+          <div class="project-header">
+            <div class="project-icon ecom">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+            </div>
+            <div class="project-links">
+              <a href="https://play.google.com/store/apps/caremall.care_mail" target="_blank" class="project-link" aria-label="Play Store">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+              </a>
+            </div>
+          </div>
+          <h3 class="project-name">CareMall</h3>
+          <p class="project-type">E-Commerce Application</p>
+          <p class="project-desc">Designed, developed, and published a Flutter-based e-commerce mobile app on the Google Play Store with product listing, category navigation, and smooth checkout flows.</p>
+          <div class="project-tags">
+            <span>Flutter</span><span>Dart</span><span>REST API</span><span>Play Store</span>
+          </div>
+          <div class="project-footer">
+            <span class="project-status live">● Live on Play Store</span>
+          </div>
+        </div>
+
+        <!-- CareMall Earn -->
+        <div class="project-card featured" data-delay="150">
+          <div class="project-glow"></div>
+          <div class="project-header">
+            <div class="project-icon earn">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+            </div>
+            <div class="project-links">
+              <a href="https://play.google.com/store/apps/details?id=com.caremall.affiliate" target="_blank" class="project-link" aria-label="Play Store">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+              </a>
+            </div>
+          </div>
+          <div class="featured-label">Featured</div>
+          <h3 class="project-name">CareMall Earns</h3>
+          <p class="project-type">Affiliate Platform</p>
+          <p class="project-desc">Affiliate e-commerce app with REST API integration, authentication, commission tracking, dashboard analytics, deep linking, link generation, KYC workflow, and withdrawal request management systems.</p>
+          <div class="project-tags">
+            <span>Flutter</span><span>REST API</span><span>Auth</span><span>KYC</span><span>Deep Link</span>
+          </div>
+          <div class="project-footer">
+            <span class="project-status live">● Live on Play Store</span>
+          </div>
+        </div>
+
+        <!-- CareMall Rider -->
+        <div class="project-card" data-delay="300">
+          <div class="project-header">
+            <div class="project-icon rider">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="5.5" cy="17.5" r="3.5"/><circle cx="18.5" cy="17.5" r="3.5"/><path d="M15 6h-5l-3 6h12l-2-4h-2zM15 6l1-3h3"/></svg>
+            </div>
+            <div class="project-links">
+              <a href="https://play.google.com/store/apps/details?id=com.caremall.rider" target="_blank" class="project-link" aria-label="Play Store">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+              </a>
+            </div>
+          </div>
+          <h3 class="project-name">CareMall Rider</h3>
+          <p class="project-type">Delivery Partner App</p>
+          <p class="project-desc">Delivery management app with Google Maps navigation, order tracking, COD collection, wallet management, earnings monitoring, and KYC verification workflows.</p>
+          <div class="project-tags">
+            <span>Flutter</span><span>Maps</span><span>GetX</span><span>Wallet</span><span>KYC</span>
+          </div>
+          <div class="project-footer">
+            <span class="project-status live">● Live on Play Store</span>
+          </div>
+        </div>
+
+        <!-- Training Projects -->
+        <div class="project-card" data-delay="450">
+          <div class="project-header">
+            <div class="project-icon train">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+            </div>
+            <div class="project-links"></div>
+          </div>
+          <h3 class="project-name">Training Projects</h3>
+          <p class="project-type">Practice Apps Collection</p>
+          <p class="project-desc">Developed Blogger App, To-Do List, Tea Shop, Weather App, and Notes App using Hive for local storage. Showcases API integration, state management, and UI skills.</p>
+          <div class="project-tags">
+            <span>Flutter</span><span>Hive</span><span>API</span><span>UI Design</span>
+          </div>
+          <div class="project-footer">
+            <span class="project-status training">● Training Portfolio</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── CONTACT ─── -->
+  <section class="section" id="contact">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Contact</span>
+        <h2 class="section-title">Let's Work Together</h2>
+        <div class="section-line"></div>
+        <p class="section-desc">Have a project in mind? I'm open to freelance work and full-time opportunities.</p>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-info">
+          <div class="contact-card">
+            <div class="contact-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg></div>
+            <h3>Email</h3>
+            <a href="mailto:erumbuzi@gmail.com">erumbuzi@gmail.com</a>
+          </div>
+          <div class="contact-card">
+            <div class="contact-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg></div>
+            <h3>LinkedIn</h3>
+            <a href="https://linkedin.com/in/jasir-muhammed-7486a8333" target="_blank">jasir-muhammed-7486a8333</a>
+          </div>
+          <div class="contact-card">
+            <div class="contact-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.29h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.09a16 16 0 0 0 6 6l.91-.91a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div>
+            <h3>Phone</h3>
+            <a href="tel:+917034415936">+91 70344 15936</a>
+          </div>
+          <div class="contact-card">
+            <div class="contact-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+            <h3>Location</h3>
+            <span>Pulikkal, Kerala, India</span>
+          </div>
+        </div>
+        <form class="contact-form" id="contactForm" action="https://formspree.io/f/xkjwjoed" method="POST" novalidate>
+          <div class="form-group">
+            <label for="name">Your Name</label>
+            <input type="text" id="name" name="name" placeholder="John Doe" required />
+          </div>
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" placeholder="john@example.com" required />
+          </div>
+          <div class="form-group">
+            <label for="subject">Subject</label>
+            <input type="text" id="subject" name="subject" placeholder="Project Inquiry" required />
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" placeholder="Tell me about your project..." required></textarea>
+          </div>
+          <button type="submit" class="btn-primary btn-full" id="submitBtn">
+            <span class="btn-text">Send Message</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+          </button>
+          <div class="form-success" id="formSuccess">
+            <span>✅ Message sent! I'll get back to you soon.</span>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── FOOTER ─── -->
+  <footer class="footer">
+    <!-- Wave Top Divider -->
+    <div class="footer-wave">
+      <svg viewBox="0 0 1440 80" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0,40 C240,80 480,0 720,40 C960,80 1200,0 1440,40 L1440,80 L0,80 Z" fill="#fafafa"/>
+      </svg>
+    </div>
+
+    <div class="footer-body">
+      <div class="footer-grid">
+
+        <!-- ── Col 1: Brand ── -->
+        <div class="footer-col footer-brand">
+          <div class="footer-logo">
+            <span class="logo-bracket">&lt;</span>
+            <span class="logo-name">Jasir</span>
+            <span class="logo-bracket">/&gt;</span>
+          </div>
+          <p class="footer-tagline">
+            Flutter Developer crafting beautiful, high-performance cross-platform apps. From idea to Play Store — I ship it.
+          </p>
+          <div class="footer-socials">
+            <a href="mailto:erumbuzi@gmail.com" class="fsocial-btn" aria-label="Email" title="Email">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+            </a>
+            <a href="https://linkedin.com/in/jasir-muhammed-7486a8333" target="_blank" rel="noopener" class="fsocial-btn" aria-label="LinkedIn" title="LinkedIn">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+            </a>
+            <a href="tel:+917034415936" class="fsocial-btn" aria-label="Phone" title="Phone">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.29h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.09a16 16 0 0 0 6 6l.91-.91a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21.73 16z"/></svg>
+            </a>
+            <a href="https://play.google.com/store/apps/details?id=com.caremall.affiliate" target="_blank" rel="noopener" class="fsocial-btn" aria-label="Play Store" title="Play Store">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="m5 3 14 9-14 9V3z"/></svg>
+            </a>
+          </div>
+          <div class="footer-status">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+            <span>Open to work</span>
+          </div>
+        </div>
+
+        <!-- ── Col 2: Navigation ── -->
+        <div class="footer-col">
+          <h4 class="footer-col-title">Navigation</h4>
+          <ul class="footer-nav">
+            <li><a href="#home">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+              Home
+            </a></li>
+            <li><a href="#about">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+              About
+            </a></li>
+            <li><a href="#skills">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+              Skills
+            </a></li>
+            <li><a href="#experience">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+              Experience
+            </a></li>
+            <li><a href="#projects">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+              Projects
+            </a></li>
+            <li><a href="#contact">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+              Contact
+            </a></li>
+          </ul>
+        </div>
+
+        <!-- ── Col 3: Services / Skills ── -->
+        <div class="footer-col">
+          <h4 class="footer-col-title">Expertise</h4>
+          <ul class="footer-nav">
+            <li><span class="footer-skill-item">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+              Flutter Development
+            </span></li>
+            <li><span class="footer-skill-item">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+              REST API Integration
+            </span></li>
+            <li><span class="footer-skill-item">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+              State Management
+            </span></li>
+            <li><span class="footer-skill-item">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+              Google Maps Integration
+            </span></li>
+            <li><span class="footer-skill-item">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+              KYC &amp; Auth Workflows
+            </span></li>
+            <li><span class="footer-skill-item">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+              Play Store Publishing
+            </span></li>
+          </ul>
+        </div>
+
+        <!-- ── Col 4: Contact ── -->
+        <div class="footer-col">
+          <h4 class="footer-col-title">Get In Touch</h4>
+          <ul class="footer-contact-list">
+            <li>
+              <div class="fcontact-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+              </div>
+              <div>
+                <span class="fcontact-label">Email</span>
+                <a href="mailto:erumbuzi@gmail.com" class="fcontact-val">erumbuzi@gmail.com</a>
+              </div>
+            </li>
+            <li>
+              <div class="fcontact-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="20" x="5" y="2" rx="2" ry="2"/><path d="M12 18h.01"/></svg>
+              </div>
+              <div>
+                <span class="fcontact-label">Phone</span>
+                <a href="tel:+917034415936" class="fcontact-val">+91 70344 15936</a>
+              </div>
+            </li>
+            <li>
+              <div class="fcontact-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+              </div>
+              <div>
+                <span class="fcontact-label">Location</span>
+                <span class="fcontact-val">Pulikkal, Kerala, India</span>
+              </div>
+            </li>
+            <li>
+              <div class="fcontact-icon">🔗</div>
+              <div>
+                <span class="fcontact-label">LinkedIn</span>
+                <a href="https://linkedin.com/in/jasir-muhammed-7486a8333" target="_blank" class="fcontact-val">jasir-muhammed</a>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+      </div><!-- /footer-grid -->
+
+      <!-- Divider -->
+      <div class="footer-divider"></div>
+
+      <!-- Bottom Bar -->
+      <div class="footer-bottom">
+      </div>
+
+    </div><!-- /footer-body -->
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
