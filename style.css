@@ -1359,3 +1359,115 @@ a.fcontact-val:hover { color: var(--cyan); }
   .about-facts { grid-template-columns: 1fr; }
   .hero-image { width: 220px; height: 220px; }
 }
+
+/* ─── SPLASH SCREEN (Minimalist White & Gold) ─── */
+body.splash-active {
+  overflow: hidden !important;
+}
+
+.splash-screen {
+  position: fixed;
+  inset: 0;
+  z-index: 999999;
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.5s ease, transform 0.5s ease, visibility 0.5s;
+}
+
+.splash-screen.splash-hide {
+  opacity: 0;
+  visibility: hidden;
+  transform: scale(0.98);
+  pointer-events: none;
+}
+
+.splash-content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 30px;
+  max-width: 380px;
+  width: 90%;
+}
+
+.splash-logo {
+  font-family: var(--font-main);
+  font-size: 3rem;
+  font-weight: 700;
+  color: #09090b;
+  letter-spacing: -0.5px;
+  margin-bottom: 6px;
+  animation: splashFloat 2s ease-in-out infinite alternate;
+}
+
+.splash-bracket {
+  color: #d97706;
+}
+
+.splash-name {
+  color: #09090b;
+  margin: 0 4px;
+}
+
+.splash-sub {
+  font-family: var(--font-main);
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #71717a;
+  margin-bottom: 32px;
+}
+
+.splash-progress-track {
+  width: 100%;
+  max-width: 220px;
+  height: 3px;
+  background: rgba(0, 0, 0, 0.06);
+  border-radius: 99px;
+  overflow: hidden;
+  margin-bottom: 12px;
+}
+
+.splash-progress-fill {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg, #d97706, #f59e0b);
+  border-radius: 99px;
+  box-shadow: 0 0 8px rgba(217, 119, 6, 0.3);
+  transition: width 0.12s ease-out;
+}
+
+.splash-footer-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 220px;
+  font-size: 0.75rem;
+  color: #71717a;
+  font-family: var(--font-code);
+}
+
+.splash-status-text {
+  color: #a1a1aa;
+}
+
+.splash-percent-text {
+  color: #d97706;
+  font-weight: 600;
+}
+
+@keyframes splashFloat {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-4px); }
+}
+
+

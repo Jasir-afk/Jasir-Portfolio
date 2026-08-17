@@ -1,7 +1,80 @@
 /* ═══════════════════════════════════════════════════
    JASIR PORTFOLIO — script.js
-   Particle Canvas · Typing Effect · Scroll Animations
+   Splash Screen · Particle Canvas · Typing Effect · Scroll Animations
 ═══════════════════════════════════════════════════ */
+
+// ─── Splash Screen (Cross-Browser Compatible) ───
+let splashInterval = null;
+
+function runSplashScreen() {
+  const splashScreen = document.getElementById('splashScreen');
+  const splashFill = document.getElementById('splashProgressFill');
+  const splashStatusText = document.getElementById('splashStatusText');
+  const splashPercentText = document.getElementById('splashPercentText');
+
+  if (!splashScreen) return;
+
+  if (splashInterval) clearInterval(splashInterval);
+
+  // Force splash screen to be visible in all browsers
+  splashScreen.style.display = 'flex';
+  splashScreen.style.opacity = '1';
+  splashScreen.style.visibility = 'visible';
+  splashScreen.classList.remove('splash-hide');
+  document.body.classList.add('splash-active');
+
+  if (splashFill) splashFill.style.width = '0%';
+  if (splashPercentText) splashPercentText.textContent = '0%';
+  if (splashStatusText) splashStatusText.textContent = 'Loading Portfolio...';
+
+  const steps = [
+    { target: 35, text: 'Loading Portfolio...' },
+    { target: 70, text: 'Initializing Components...' },
+    { target: 100, text: 'Welcome!' }
+  ];
+
+  let currentPercent = 0;
+  let currentStep = 0;
+
+  splashInterval = setInterval(() => {
+    currentPercent += Math.floor(Math.random() * 3) + 2;
+    if (currentPercent >= 100) {
+      currentPercent = 100;
+      clearInterval(splashInterval);
+    }
+
+    if (splashFill) splashFill.style.width = currentPercent + '%';
+    if (splashPercentText) splashPercentText.textContent = currentPercent + '%';
+
+    if (currentStep < steps.length - 1 && currentPercent >= steps[currentStep].target) {
+      currentStep++;
+      if (splashStatusText) splashStatusText.textContent = steps[currentStep].text;
+    }
+
+    if (currentPercent >= 100) {
+      setTimeout(() => {
+        splashScreen.classList.add('splash-hide');
+        document.body.classList.remove('splash-active');
+        setTimeout(() => {
+          splashScreen.style.display = 'none';
+        }, 500);
+      }, 350);
+    }
+  }, 30);
+}
+
+// Run immediately and listen to DOMContentLoaded + pageshow for all browsers/caches
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', runSplashScreen);
+} else {
+  runSplashScreen();
+}
+
+window.addEventListener('pageshow', (e) => {
+  if (e.persisted) {
+    runSplashScreen();
+  }
+});
 
 // ─── Cursor Glow ───
 const cursorGlow = document.getElementById('cursorGlow');
