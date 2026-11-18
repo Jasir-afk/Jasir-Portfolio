@@ -60,6 +60,7 @@ body {
   inset: 0;
   z-index: 0;
   pointer-events: none;
+  display: none;
 }
 
 /* ── Cursor Glow ── */
@@ -201,6 +202,7 @@ body {
   height: 100%;
   pointer-events: none;
   z-index: 1;
+  display: none;
 }
 
 .hero::before {
@@ -371,6 +373,31 @@ body {
   overflow: hidden;
   border: 3px solid var(--border-glow);
   box-shadow: 0 8px 32px rgba(0,0,0,0.15);
+  position: relative;
+}
+
+.photo-frame::before {
+  content: '';
+  position: absolute;
+  inset: -8px;
+  border-radius: 50%;
+  border: 2px dashed var(--primary);
+  opacity: 0.4;
+  animation: rotateRing 20s linear infinite;
+}
+
+.photo-frame::after {
+  content: '';
+  position: absolute;
+  inset: -16px;
+  border-radius: 50%;
+  border: 1px solid var(--border-glow);
+  opacity: 0.3;
+}
+
+@keyframes rotateRing {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
 }
 
 .developer-photo {
